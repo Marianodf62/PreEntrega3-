@@ -30,6 +30,47 @@ $espaciado: 1rem;
     }
 }
 
+@mixin sombra-suave {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+@mixin animacion-hover {
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@mixin boton-estilo($color-fondo, $color-texto) {
+    background-color: $color-fondo;
+    color: $color-texto;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: lighten($color-fondo, 10%);
+        color: darken($color-texto, 10%);
+    }
+}
+
+// KEYFRAMES
+@keyframes entrada-suave {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 // ESTILOS GENERALES
 body {
     background-color: $color-fondo;
@@ -65,45 +106,6 @@ body {
     @include responsive(md) {
         .titulo-vape {
             margin-top: 1rem;
-        }
-    }
-}
-
-// CAROUSEL
-.carousel-container {
-    width: 80%;
-    max-width: 900px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-
-    img {
-        height: 400px;
-        object-fit: cover;
-    }
-
-    @include responsive(md) {
-        width: 95%;
-
-        img {
-            height: 250px;
-        }
-    }
-}
-
-// CARDS
-.seccion-cards {
-    .tarjeta-producto {
-        transition: transform 0.3s ease-in-out;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border: none;
-
-        &:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-title {
-            color: $color-principal;
         }
     }
 }
@@ -151,3 +153,123 @@ body {
         }
     }
 }
+
+// CAROUSEL
+.carousel-container {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    img {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    @include responsive(md) {
+        width: 95%;
+
+        img {
+            height: 250px;
+        }
+    }
+}
+
+// SECCIÓN PRODUCTOS
+.seccion-productos {
+    background-color: $color-fondo;
+
+    .titulo-seccion {
+        color: $color-principal;
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    .tarjeta-producto {
+        background-color: #fff;
+        border-radius: 1rem;
+        overflow: hidden;
+        @include sombra-suave;
+        @include animacion-hover;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 0.5rem;
+
+        .etiqueta-nuevo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: $color-hover;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.4rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .imagen-producto {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .contenido-producto {
+            padding: 1.2rem;
+
+            .nombre-producto {
+                font-size: 1.2rem;
+                color: $color-principal;
+                margin-bottom: 0.5rem;
+            }
+
+            .descripcion-producto {
+                font-size: 0.95rem;
+                color: darken($color-texto, 30%);
+                margin-bottom: 0.5rem;
+            }
+
+            .precio-producto {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: $color-principal;
+                margin-bottom: 1rem;
+            }
+
+            .boton-comprar {
+                @include boton-estilo($color-principal, $color-texto);
+                width: 100%;
+            }
+        }
+
+        &:hover .imagen-producto {
+            transform: scale(1.05);
+        }
+    }
+
+    .animacion-entrada {
+        animation: entrada-suave 0.8s ease forwards;
+    }
+
+    @include responsive(md) {
+        .titulo-seccion {
+            font-size: 1.8rem;
+        }
+
+        .tarjeta-producto {
+            .imagen-producto {
+                height: 180px;
+            }
+
+            .nombre-producto {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
