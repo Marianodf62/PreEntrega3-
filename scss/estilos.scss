@@ -37,7 +37,7 @@ header {
     }
 }
 
-// Media queries personalizadas (por si querés hacer más ajustes)
+// Media queries
 @media (max-width: 768px) {
     header {
         .navbar-nav {
@@ -55,12 +55,14 @@ header {
     background-color: #f4f4f4;
 
     .carousel {
-        max-height: 400px;
+        margin: 2rem auto;
+        max-width: 800px;
+        border-radius: 10px;
         overflow: hidden;
 
         img {
+            height: 400px;
             object-fit: cover;
-            height: 100%;
         }
     }
 
@@ -88,15 +90,8 @@ header {
             color: #666;
         }
 
-        .btn {
-            background-color: #4ad295;
-            border: none;
-
-            &:hover {
-                background-color: #38b68b;
-            }
-        }
     }
+
 
     @media (max-width: 768px) {
         .producto-card {
@@ -108,3 +103,47 @@ header {
     }
 }
 
+/*----- ESTILOS PARA EL FOOTER ------*/
+.footer {
+    background-color: #222;
+    font-size: 0.95rem;
+
+    .redes a {
+        color: #4ad295;
+        margin-right: 15px;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #38b68b;
+        }
+    }
+
+    .nombre-pagina h5 {
+        margin: 0;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .contacto {
+        text-align: right;
+
+        p {
+            margin: 0;
+            color: #ccc;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .redes,
+        .contacto {
+            text-align: center;
+        }
+
+        .contacto {
+            margin-top: 10px;
+        }
+    }
+}

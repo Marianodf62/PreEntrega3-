@@ -44,12 +44,14 @@ header .nav-link.active {
   background-color: #f4f4f4;
 }
 .productos .carousel {
-  max-height: 400px;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 10px;
   overflow: hidden;
 }
 .productos .carousel img {
+  height: 400px;
   object-fit: cover;
-  height: 100%;
 }
 .productos .producto-card {
   border: none;
@@ -71,17 +73,47 @@ header .nav-link.active {
 .productos .producto-card .card-text {
   color: #666;
 }
-.productos .producto-card .btn {
-  background-color: #4ad295;
-  border: none;
-}
-.productos .producto-card .btn:hover {
-  background-color: #38b68b;
-}
 @media (max-width: 768px) {
   .productos .producto-card:hover {
     transform: none;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/*----- ESTILOS PARA EL FOOTER ------*/
+.footer {
+  background-color: #222;
+  font-size: 0.95rem;
+}
+.footer .redes a {
+  color: #4ad295;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.footer .redes a:hover {
+  color: #38b68b;
+}
+.footer .nombre-pagina h5 {
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.footer .contacto {
+  text-align: right;
+}
+.footer .contacto p {
+  margin: 0;
+  color: #ccc;
+}
+@media (max-width: 768px) {
+  .footer .redes,
+  .footer .contacto {
+    text-align: center;
+  }
+  .footer .contacto {
+    margin-top: 10px;
   }
 }
 
