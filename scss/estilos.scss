@@ -1,0 +1,110 @@
+/*------ ESTILOS GENERALES ------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*----- ESTILOS PARA EL HEADER ------*/
+header {
+    background-color: #1c1c1c;
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #4ad295;
+
+        img {
+            border-radius: 50%;
+        }
+
+        &:hover {
+            color: #38b68b;
+        }
+    }
+
+    .nav-link {
+        color: #fff;
+        margin-left: 1rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #4ad295;
+        }
+
+        &.active {
+            color: #4ad295;
+        }
+    }
+}
+
+// Media queries personalizadas (por si querés hacer más ajustes)
+@media (max-width: 768px) {
+    header {
+        .navbar-nav {
+            text-align: center;
+
+            .nav-link {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}
+
+/*------ ESTILOS PARA LA SECCION DE INCIO CON CAROUSEL Y CARS CON GRID ------*/
+.productos {
+    background-color: #f4f4f4;
+
+    .carousel {
+        max-height: 400px;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+
+    .producto-card {
+        border: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-text {
+            color: #666;
+        }
+
+        .btn {
+            background-color: #4ad295;
+            border: none;
+
+            &:hover {
+                background-color: #38b68b;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .producto-card {
+            &:hover {
+                transform: none;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
+

@@ -1,3 +1,88 @@
+/*------ ESTILOS GENERALES ------*/
+* {
+  margin: 0;
+  padding: 0;
+}
 
+/*----- ESTILOS PARA EL HEADER ------*/
+header {
+  background-color: #1c1c1c;
+}
+header .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #4ad295;
+}
+header .navbar-brand img {
+  border-radius: 50%;
+}
+header .navbar-brand:hover {
+  color: #38b68b;
+}
+header .nav-link {
+  color: #fff;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+header .nav-link:hover {
+  color: #4ad295;
+}
+header .nav-link.active {
+  color: #4ad295;
+}
+
+@media (max-width: 768px) {
+  header .navbar-nav {
+    text-align: center;
+  }
+  header .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+}
+/*------ ESTILOS PARA LA SECCION DE INCIO CON CAROUSEL Y CARS CON GRID ------*/
+.productos {
+  background-color: #f4f4f4;
+}
+.productos .carousel {
+  max-height: 400px;
+  overflow: hidden;
+}
+.productos .carousel img {
+  object-fit: cover;
+  height: 100%;
+}
+.productos .producto-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.productos .producto-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.productos .producto-card img {
+  height: 200px;
+  object-fit: cover;
+}
+.productos .producto-card .card-title {
+  font-weight: bold;
+  color: #333;
+}
+.productos .producto-card .card-text {
+  color: #666;
+}
+.productos .producto-card .btn {
+  background-color: #4ad295;
+  border: none;
+}
+.productos .producto-card .btn:hover {
+  background-color: #38b68b;
+}
+@media (max-width: 768px) {
+  .productos .producto-card:hover {
+    transform: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
 
 /*# sourceMappingURL=estilos.css.map */

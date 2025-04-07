@@ -3,13 +3,114 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Vape Shop</title>
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   </head>
   <body>
     
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="./assets/img/logo.jpg" alt="Logo" width="40" height="40" class="me-2">
+            <span>Vape Shop</span>
+          </a>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#inicio">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#productos">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#nosotros">Liquidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#nosotros">Nosotors
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+
+      <section class="py-5">
+        <div class="container">
+          <!-- Carousel -->
+          <div class="carouselVape carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/vape1.jpg" class="d-block w-100" alt="Vape 1">
+              </div>
+              <div class="carousel-item">
+                <img src="img/vape2.jpg" class="d-block w-100" alt="Vape 2">
+              </div>
+              <div class="carousel-item">
+                <img src="img/vape3.jpg" class="d-block w-100" alt="Vape 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselVape" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselVape" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+      
+          <!-- Cards Grid -->
+          <div class="row g-4">
+            <div class="col-md-4 col-sm-6" *ngFor="let i of [1,2,3,4,5,6]">
+              <div class="card producto-card h-100">
+                <img src="img/producto.jpg" class="card-img-top" alt="Producto">
+                <div class="card-body">
+                  <h5 class="card-title">Vape Modelo X</h5>
+                  <p class="card-text">Sabor intenso y batería de larga duración.</p>
+                  <button class="btn btn-primary">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>
 </html>
