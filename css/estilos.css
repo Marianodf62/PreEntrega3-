@@ -7,25 +7,20 @@ body {
 .barra-navegacion {
   background-color: #111827;
   padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 .barra-navegacion .logo-img {
   width: 40px;
   height: auto;
 }
-.barra-navegacion .titulo-header h1.titulo-vape {
-  margin: 0;
+.barra-navegacion .titulo-vape {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: bold;
   color: #ffffff;
+  margin: 0;
 }
 .barra-navegacion .menu-navegacion .enlace-navegacion {
   margin: 0 1rem;
   color: #ffffff;
-  font-weight: 500;
-  position: relative;
   transition: all 0.3s ease-in-out;
 }
 .barra-navegacion .menu-navegacion .enlace-navegacion:hover {
@@ -33,18 +28,76 @@ body {
   transform: scale(1.05);
 }
 @media (max-width: 768px) {
-  .barra-navegacion .titulo-header {
-    order: 3;
-    width: 100%;
-    text-align: center;
+  .barra-navegacion .titulo-vape {
     margin-top: 1rem;
   }
-  .barra-navegacion .menu-navegacion {
-    flex-direction: column;
-    align-items: center;
+}
+
+.carousel-container {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.carousel-container img {
+  height: 400px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 95%;
   }
-  .barra-navegacion .menu-navegacion .enlace-navegacion {
-    margin: 0.5rem 0;
+  .carousel-container img {
+    height: 250px;
+  }
+}
+
+.seccion-cards .tarjeta-producto {
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.seccion-cards .tarjeta-producto:hover {
+  transform: translateY(-5px);
+}
+.seccion-cards .tarjeta-producto .card-title {
+  color: #111827;
+}
+
+.footer {
+  background-color: #222;
+  font-size: 0.95rem;
+}
+.footer .redes a {
+  color: #4ad295;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.footer .redes a:hover {
+  color: #38b68b;
+}
+.footer .nombre-pagina h5 {
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.footer .contacto {
+  text-align: right;
+}
+.footer .contacto p {
+  margin: 0;
+  color: #ccc;
+}
+@media (max-width: 768px) {
+  .footer .redes,
+  .footer .contacto {
+    text-align: center;
+  }
+  .footer .contacto {
+    margin-top: 10px;
   }
 }
 

@@ -7,11 +7,11 @@ $tamaño-fuente-base: 16px;
 $espaciado: 1rem;
 
 // MIXINS
-@mixin hover-moderno($color-hover) {
+@mixin hover-moderno($color) {
     transition: all 0.3s ease-in-out;
 
     &:hover {
-        color: $color-hover;
+        color: $color;
         transform: scale(1.05);
     }
 }
@@ -28,12 +28,6 @@ $espaciado: 1rem;
             @content;
         }
     }
-
-    @else if $breakpoint ==lg {
-        @media (max-width: 992px) {
-            @content;
-        }
-    }
 }
 
 // ESTILOS GENERALES
@@ -43,53 +37,117 @@ body {
     color: $color-texto;
 }
 
-// BARRA DE NAVEGACION
+// HEADER
 .barra-navegacion {
     background-color: $color-principal;
     padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 
     .logo-img {
         width: 40px;
         height: auto;
     }
 
-    .titulo-header {
-        h1.titulo-vape {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: $color-texto;
-        }
+    .titulo-vape {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $color-texto;
+        margin: 0;
     }
 
     .menu-navegacion {
         .enlace-navegacion {
             margin: 0 $espaciado;
             color: $color-texto;
-            font-weight: 500;
-            position: relative;
             @include hover-moderno($color-hover);
         }
     }
 
     @include responsive(md) {
-        .titulo-header {
-            order: 3;
-            width: 100%;
-            text-align: center;
+        .titulo-vape {
             margin-top: 1rem;
         }
+    }
+}
 
-        .menu-navegacion {
-            flex-direction: column;
-            align-items: center;
+// CAROUSEL
+.carousel-container {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
-            .enlace-navegacion {
-                margin: 0.5rem 0;
-            }
+    img {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    @include responsive(md) {
+        width: 95%;
+
+        img {
+            height: 250px;
+        }
+    }
+}
+
+// CARDS
+.seccion-cards {
+    .tarjeta-producto {
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: none;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            color: $color-principal;
+        }
+    }
+}
+
+.footer {
+    background-color: #222;
+    font-size: 0.95rem;
+
+    .redes a {
+        color: #4ad295;
+        margin-right: 15px;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #38b68b;
+        }
+    }
+
+    .nombre-pagina h5 {
+        margin: 0;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .contacto {
+        text-align: right;
+
+        p {
+            margin: 0;
+            color: #ccc;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .redes,
+        .contacto {
+            text-align: center;
+        }
+
+        .contacto {
+            margin-top: 10px;
         }
     }
 }

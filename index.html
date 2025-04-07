@@ -1,76 +1,178 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vape Shop</title>
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  </head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <body>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
     <header class="barra-navegacion navbar navbar-expand-lg">
         <div class="container-fluid justify-content-between align-items-center">
 
-          <!-- LOGO -->
-          <div class="logo-header d-flex align-items-center">
-            <img src="./assets/img/logo.jpg" alt="Logo" class="logo-img me-2" />
-          </div>
-    
-          <!-- NOMBRE CENTRADO -->
-          <div class="titulo-header mx-auto text-center">
-            <h1 class="titulo-vape">VAPE SHOP</h1>
-          </div>
-    
-          <!-- MENÚ -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <nav class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
-            <ul class="navbar-nav menu-navegacion">
-              <li class="nav-item"><a class="nav-link enlace-navegacion" href="./index.html">INICIO</a></li>
-              <li class="nav-item"><a class="nav-link enlace-navegacion" href="./views/productos.html">PRODUCTOS</a></li>
-              <li class="nav-item"><a class="nav-link enlace-navegacion" href="./views/liquidos.html">LIQUIDOS</a></li>
-              <li class="nav-item"><a class="nav-link enlace-navegacion" href="./views/quienesSomos.html">NOSOTROS</a></li>
-              <li class="nav-item"><a class="nav-link enlace-navegacion" href="./views/contacto.html">CONTACTO</a></li>
-            </ul>
-          </nav>
+            <!-- LOGO -->
+            <div class="logo-header d-flex align-items-center">
+                <img src="./assets/img/logo.jpg" alt="Logo" class="logo-img me-2" />
+            </div>
+
+            <!-- NOMBRE CENTRADO -->
+            <div class="titulo-header mx-auto text-center">
+                <h1 class="titulo-vape">VAPE SHOP</h1>
+            </div>
+
+            <!-- MENÚ -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <nav class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
+                <ul class="navbar-nav menu-navegacion">
+                    <li class="nav-item"><a class="nav-link enlace-navegacion" href="./index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link enlace-navegacion"
+                            href="./views/productos.html">PRODUCTOS</a></li>
+                    <li class="nav-item"><a class="nav-link enlace-navegacion" href="./views/liquidos.html">LIQUIDOS</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link enlace-navegacion"
+                            href="./views/quienesSomos.html">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link enlace-navegacion" href="./views/contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-      </header>
-    
-    
+    </header>
 
+    <!-- CONTENIDO -->
+    <main class="contenido-principal">
 
-      
+        <!-- CAROUSEL -->
+        <section class="seccion-carousel my-5 d-flex justify-content-center">
+            <div class="carousel-container">
+                <div id="miCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/carousel1.jpg" class="d-block w-100" alt="Imagen 1" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/carousel2.jpg" class="d-block w-100" alt="Imagen 2" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/carousel3.jpg" class="d-block w-100" alt="Imagen 3" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#miCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#miCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
 
+        <!-- CARDS -->
+        <section class="seccion-cards container py-5">
+            <div class="row g-4">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card tarjeta-producto">
+                        <img src="./assets/img/card1.jpg" class="card-img-top" alt="Producto 1" />
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 1</h5>
+                            <p class="card-text">Descripción breve del producto 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repite para los demás productos -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="card tarjeta-producto">
+                        <img src="./assets/img/card2.avif" class="card-img-top" alt="Producto 2" />
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 2</h5>
+                            <p class="card-text">Descripción breve del producto 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card tarjeta-producto">
+                        <img src="./assets/img/card3.jpg" class="card-img-top" alt="Producto 3" />
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 3</h5>
+                            <p class="card-text">Descripción breve del producto 3.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card tarjeta-producto">
+                        <img src="./assets/img/card4.avif" class="card-img-top" alt="Producto 4" />
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 4</h5>
+                            <p class="card-text">Descripción breve del producto 4.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card tarjeta-producto">
+                        <img src="./assets/img/card5.avif" class="card-img-top" alt="Producto 5" />
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 5</h5>
+                            <p class="card-text">Descripción breve del producto 5.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card tarjeta-producto">
+                        <img src="./assets/img/card6.avif" class="card-img-top" alt="Producto 6" />
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 6</h5>
+                            <p class="card-text">Descripción breve del producto 6.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <!-- INICIO DEL FOOTER -->
+    <footer class="footer text-white py-4">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
 
+                <!-- Información de contacto -->
+                <div class="col-md-4 contacto">
+                    <p class="mb-0">info@vapeshop.com</p>
+                    <p class="mb-0">+54 9 11 1234 5678</p>
+                </div>
 
+                <!-- Nombre del sitio centro -->
+                <div class="col-md-4 mb-3 mb-md-0 nombre-pagina">
+                    <h5>Vape Shop</h5>
+                </div>
 
+                <!-- Redes sociales-->
+                <div class="col-md-4 mb-3 mb-md-0 redes">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-  </body>
 </html>
