@@ -273,3 +273,237 @@ body {
     }
 }
 
+// SECCION DE QUIENES SOMOS 
+
+// MIXINS
+@mixin sombra-suave {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==sm {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+}
+
+@mixin hover-suave {
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.seccion-quienes-somos {
+    background-color: $color-fondo;
+    text-align: center;
+
+    .contenedor-imagen-equipo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .imagen-equipo {
+            max-width: 100%;
+            width: 600px;
+            border-radius: 1rem;
+            @include sombra-suave;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    @include responsive(md) {
+        .contenedor-imagen-equipo {
+            .imagen-equipo {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// TARJETAS DE PERSONAL
+.tarjeta-personal {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    @include sombra-suave;
+    @include hover-suave;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .imagen-personal-contenedor {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+
+        .imagen-personal {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .nombre-personal {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $color-principal;
+        margin-bottom: 0.3rem;
+    }
+
+    .puesto-personal {
+        font-size: 1rem;
+        color: darken($color-principal, 20%);
+        margin-bottom: 0.2rem;
+    }
+
+    .edad-personal {
+        font-size: 0.95rem;
+        color: gray;
+    }
+}
+
+// RESPONSIVE
+@include responsive(md) {
+    .titulo-seccion {
+        font-size: 1.8rem;
+    }
+
+    .texto-descripcion {
+        font-size: 0.95rem;
+    }
+
+    .tarjeta-personal {
+        padding: 1rem;
+
+        .nombre-personal {
+            font-size: 1.1rem;
+        }
+
+        .puesto-personal,
+        .edad-personal {
+            font-size: 0.9rem;
+        }
+
+        .imagen-personal-contenedor {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+
+// SECCION CONTACTO
+
+// MIXINS
+@mixin sombra-suave {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==sm {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+}
+
+// ESTILOS DE LA SECCIÓN DE CONTACTO
+.seccion-contacto {
+    background-color: $color-fondo;
+
+    .titulo-contacto {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $color-principal;
+    }
+
+    .subtitulo-contacto {
+        color: darken($color-principal, 15%);
+        font-size: 1rem;
+    }
+
+    .info-contacto {
+        text-align: left;
+
+        h4 {
+            font-size: 1.3rem;
+            color: $color-principal;
+        }
+
+        p {
+            font-size: 1rem;
+            color: darken($color-principal, 25%);
+        }
+    }
+
+    .formulario-contacto {
+        .form-control {
+            border-radius: 0.5rem;
+            border: 1px solid #ccc;
+            padding: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .btn-enviar {
+            background-color: $color-hover;
+            color: $color-texto;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            margin-top: 0.5rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken($color-hover, 10%);
+            }
+        }
+    }
+
+    .mapa-contacto {
+        margin-top: 3rem;
+
+        iframe {
+            border-radius: 1rem;
+            @include sombra-suave;
+        }
+    }
+
+    @include responsive(md) {
+        .titulo-contacto {
+            font-size: 1.8rem;
+        }
+
+        .formulario-contacto {
+            .form-control {
+                font-size: 0.95rem;
+            }
+        }
+    }
+}

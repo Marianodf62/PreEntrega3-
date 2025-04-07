@@ -193,4 +193,155 @@ body {
   }
 }
 
+.seccion-quienes-somos {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+.seccion-quienes-somos .contenedor-imagen-equipo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.seccion-quienes-somos .contenedor-imagen-equipo .imagen-equipo {
+  max-width: 100%;
+  width: 600px;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.seccion-quienes-somos .contenedor-imagen-equipo .imagen-equipo:hover {
+  transform: scale(1.03);
+}
+@media (max-width: 768px) {
+  .seccion-quienes-somos .contenedor-imagen-equipo .imagen-equipo {
+    width: 100%;
+  }
+}
+
+.tarjeta-personal {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tarjeta-personal:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.tarjeta-personal .imagen-personal-contenedor {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.tarjeta-personal .imagen-personal-contenedor .imagen-personal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.tarjeta-personal .nombre-personal {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.3rem;
+}
+.tarjeta-personal .puesto-personal {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 0.2rem;
+}
+.tarjeta-personal .edad-personal {
+  font-size: 0.95rem;
+  color: gray;
+}
+
+@media (max-width: 768px) {
+  .titulo-seccion {
+    font-size: 1.8rem;
+  }
+  .texto-descripcion {
+    font-size: 0.95rem;
+  }
+  .tarjeta-personal {
+    padding: 1rem;
+  }
+  .tarjeta-personal .nombre-personal {
+    font-size: 1.1rem;
+  }
+  .tarjeta-personal .puesto-personal,
+  .tarjeta-personal .edad-personal {
+    font-size: 0.9rem;
+  }
+  .tarjeta-personal .imagen-personal-contenedor {
+    width: 100px;
+    height: 100px;
+  }
+}
+.seccion-contacto {
+  background-color: #f5f5f5;
+}
+.seccion-contacto .titulo-contacto {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+.seccion-contacto .subtitulo-contacto {
+  color: black;
+  font-size: 1rem;
+}
+.seccion-contacto .info-contacto {
+  text-align: left;
+}
+.seccion-contacto .info-contacto h4 {
+  font-size: 1.3rem;
+  color: #111827;
+}
+.seccion-contacto .info-contacto p {
+  font-size: 1rem;
+  color: black;
+}
+.seccion-contacto .formulario-contacto .form-control {
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+.seccion-contacto .formulario-contacto .btn-enviar {
+  background-color: #00bcd4;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.seccion-contacto .formulario-contacto .btn-enviar:hover {
+  background-color: rgb(0, 142.7735849057, 161);
+}
+.seccion-contacto .mapa-contacto {
+  margin-top: 3rem;
+}
+.seccion-contacto .mapa-contacto iframe {
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .seccion-contacto .titulo-contacto {
+    font-size: 1.8rem;
+  }
+  .seccion-contacto .formulario-contacto .form-control {
+    font-size: 0.95rem;
+  }
+}
+
 /*# sourceMappingURL=estilos.css.map */
